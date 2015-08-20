@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RHI-RJ-zVD" customClass="MRPaoPaoView">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sr-6P-ddY" userLabel="名称">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="SZi-bj-avh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1be-8o-tAi">
+                    <rect key="frame" x="0.0" y="21" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ST0-0b-fnK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hML-wb-Vx8">
+                    <rect key="frame" x="0.0" y="42" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="ck9-KO-8gS"/>
+                        <constraint firstAttribute="width" constant="48" id="h6Y-E6-X1h"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="btn_goto">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnU-vG-Hs8">
+                    <rect key="frame" x="48" y="42" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="O1n-wC-CN2"/>
+                        <constraint firstAttribute="width" constant="48" id="kNr-xj-3ca"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="btn_detail">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hML-wb-Vx8" firstAttribute="leading" secondItem="RHI-RJ-zVD" secondAttribute="leading" id="1A9-sv-WUc"/>
+                <constraint firstAttribute="trailing" secondItem="7sr-6P-ddY" secondAttribute="trailing" id="4Ri-wf-6K1"/>
+                <constraint firstItem="7sr-6P-ddY" firstAttribute="leading" secondItem="RHI-RJ-zVD" secondAttribute="leading" id="6s1-8H-1Ez"/>
+                <constraint firstItem="1be-8o-tAi" firstAttribute="top" secondItem="7sr-6P-ddY" secondAttribute="bottom" id="9cq-Mf-0ba"/>
+                <constraint firstItem="hML-wb-Vx8" firstAttribute="top" secondItem="1be-8o-tAi" secondAttribute="bottom" id="FFS-Wn-uad"/>
+                <constraint firstItem="YnU-vG-Hs8" firstAttribute="leading" secondItem="hML-wb-Vx8" secondAttribute="trailing" id="Jw1-VD-1kM"/>
+                <constraint firstItem="YnU-vG-Hs8" firstAttribute="top" secondItem="1be-8o-tAi" secondAttribute="bottom" id="K8X-Ea-jLK"/>
+                <constraint firstItem="7sr-6P-ddY" firstAttribute="top" secondItem="RHI-RJ-zVD" secondAttribute="top" id="UbT-I2-Jpw"/>
+                <constraint firstAttribute="trailing" secondItem="1be-8o-tAi" secondAttribute="trailing" id="cga-X1-ZPG"/>
+                <constraint firstItem="1be-8o-tAi" firstAttribute="leading" secondItem="RHI-RJ-zVD" secondAttribute="leading" id="e06-Ob-R10"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="1be-8o-tAi" id="2UA-54-Cma"/>
+                <outlet property="detailBtn" destination="YnU-vG-Hs8" id="a7J-HB-nKB"/>
+                <outlet property="gotoBtn" destination="hML-wb-Vx8" id="QnB-y9-KWm"/>
+                <outlet property="nameLabel" destination="7sr-6P-ddY" id="pB6-aV-3SX"/>
+            </connections>
+            <point key="canvasLocation" x="406" y="-25"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_detail" width="48" height="48"/>
+        <image name="btn_goto" width="48" height="48"/>
+    </resources>
+</document>
