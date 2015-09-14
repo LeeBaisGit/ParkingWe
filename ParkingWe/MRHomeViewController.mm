@@ -15,8 +15,12 @@
 #import "MRPaoPaoView.h"
 #import "MRRouteAnnotation.h"
 #import "UIImage+Rotate.h"
+#import "MRPointAnnotation.h"
+#import "MRParkDetailTableViewController.h"
+#import "MBProgressHUD+MR.h"
 
-@interface MRHomeViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate, BMKPoiSearchDelegate,BMKGeoCodeSearchDelegate, BMKRouteSearchDelegate>
+
+@interface MRHomeViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate, BMKPoiSearchDelegate,BMKGeoCodeSearchDelegate, BMKRouteSearchDelegate,MRParkDetailTableViewControllerDelegate>
 
 /**
  *  百度地图view
@@ -41,6 +45,12 @@
 @property(nonatomic,strong)NSMutableArray *resultsArray;
 
 /**
+ *  记录点击的标注对应的poiUid
+ */
+@property(nonatomic,copy)NSString *poiUid;
+
+
+/**
  *  用于记录当前用户所在的位置信息
  */
 @property(nonatomic,strong)BMKUserLocation *userLocation;
@@ -60,6 +70,11 @@
  *  到这里去按钮
  */
 @property(nonatomic,strong)UIButton *gotoBtn;
+
+/**
+ *  详情按钮
+ */
+@property(nonatomic,strong)UIButton *detailBtn;
 
 
 /**
@@ -161,6 +176,22 @@
 }
 
 #pragma mark - 懒加载
+- (UIButton *)detailBtn
+{
+    if (_detailBtn == nil) {
+        _detailBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _detailBtn.bounds = CGRectMake(0, 0, 48, 48);
+        [_detailBtn setBackgroundImage:[UIImage imageNamed:@"btn_detail"] forState:UIControlStateNormal];
+        
+        [_detailBtn addTarget:self action:@selector(detailBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    return _detailBtn;
+}
+
+
+
+#pragma mark - 懒加载
 - (BMKRouteSearch *)routeSearch
 {
     if (_routeSearch == nil) {
@@ -237,6 +268,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self setupMapView];
+}
+
+
+/**
+ *  地图的各种服务的初始化
+ */
+- (void)setupMapView
+{
+
     self.mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
     
     // 禁止地图旋转
@@ -267,9 +309,12 @@
     self.poiSearch.delegate = self;
     
     self.geocodeSearch.delegate = self;
-
+    
     self.routeSearch.delegate = self;
+
 }
+
+
 
 /*
 - (void)viewDidAppear:(BOOL)animated
@@ -291,12 +336,24 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    Mylog(@"view即将消失");
+    
+//    [self clearServiceFromMapView];
+
+}
+
+/**
+ *  清空地图的各种服务
+ */
+- (void)clearServiceFromMapView
+{
     self.mapView.delegate = nil; // 不用时，置nil
     self.locationService = nil;
     self.geocodeSearch.delegate = nil;
     self.routeSearch.delegate = nil;
-
 }
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -392,40 +449,44 @@
 {
     Mylog(@"根据anntation生成对应的Viewv");
     
-    if (![annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        // 处理系统自带的我的位置的大头针
-        return nil;
-    }
+//    if (![annotation isKindOfClass:[MRPointAnnotation class]]) {
+//        // 处理系统自带的我的位置的大头针
+//        return nil;
+//    }
 
     if ([annotation isKindOfClass:[MRRouteAnnotation class]]) {
         return [self getRouteAnnotationView:self.mapView viewForAnnotation:(MRRouteAnnotation*)annotation];
     }
     
-    static NSString *annoIdentifier = @"park";
     
-    BMKPinAnnotationView *parkPointView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annoIdentifier];
-    
-    if (parkPointView == nil) {
-        parkPointView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annoIdentifier];
+    if ([annotation isKindOfClass:[MRPointAnnotation class]]) {
         
-//        parkPointView.paopaoView = [[BMKActionPaopaoView alloc] initWithCustomView:[UIButton buttonWithType:UIButtonTypeContactAdd]];
+        static NSString *annoIdentifier = @"park";
         
-        parkPointView.image = [UIImage imageNamed:@"an_3_P"];
+        BMKPinAnnotationView *parkPointView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annoIdentifier];
         
-        parkPointView.leftCalloutAccessoryView = self.gotoBtn;
+        if (parkPointView == nil) {
+            parkPointView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annoIdentifier];
+            
+            //        parkPointView.paopaoView = [[BMKActionPaopaoView alloc] initWithCustomView:[UIButton buttonWithType:UIButtonTypeContactAdd]];
+            
+            parkPointView.image = [UIImage imageNamed:@"an_3_P"];
+            
+            parkPointView.leftCalloutAccessoryView = self.gotoBtn;
+            parkPointView.rightCalloutAccessoryView = self.detailBtn;
+            // 设置颜色
+            //        parkPointView.pinColor = BMKPinAnnotationColorPurple;
+            // 从天上掉下效果
+            parkPointView.animatesDrop = YES;
+            // 设置可拖拽
+            parkPointView.draggable = YES;
+            
+        }
         
-        // 设置颜色
-//        parkPointView.pinColor = BMKPinAnnotationColorPurple;
-        // 从天上掉下效果
-        parkPointView.animatesDrop = YES;
-        // 设置可拖拽
-        parkPointView.draggable = YES;
-        
+        return parkPointView;
     }
     
-    return parkPointView;
-
-    
+    return nil;
 }
 
 /**
@@ -451,9 +512,15 @@
 //    Mylog(@"%@", NSStringFromCGRect(view.paopaoView.frame));
     
     // 获取点击的view的annotation
-    BMKPointAnnotation *anno = view.annotation;
+    MRPointAnnotation *anno = view.annotation;
+    
+//    MRRouteAnnotation *anno = view.annotation;
+    
     // 保存点击的标注的坐标
     self.gotoCoordinate = anno.coordinate;
+    
+    // 保存点击的标注对应的poiUid
+    self.poiUid = anno.poiUid;
     
     // 反地理编码 获取用户目的地地址
     BMKReverseGeoCodeOption *reverse = [[BMKReverseGeoCodeOption alloc] init];
@@ -692,7 +759,42 @@
 - (void)onGetPoiDetailResult:(BMKPoiSearch*)searcher result:(BMKPoiDetailResult*)poiDetailResult errorCode:(BMKSearchErrorCode)errorCode
 {
     Mylog(@"返回POI详情搜索结果");
+    Mylog(@"%@", [NSThread currentThread]);
+    // 正常返回
+    if (errorCode == BMK_SEARCH_NO_ERROR) {
+        
+        [self clearOverlay];
+        
+//        UIStoryboard *parkDetail = [UIStoryboard storyboardWithName:@"ParkDetail" bundle:nil];
+//        
+//        [self.navigationController presentViewController:[parkDetail instantiateInitialViewController] animated:nil completion:nil];
+
+        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//        });
+        
+        
+        // 手动执行segue
+        [self performSegueWithIdentifier:@"annotation2detail" sender:poiDetailResult];
+    
+    }
+    
 }
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    Mylog(@"执行segue");
+    
+    Mylog(@"%@",sender);
+    
+    MRParkDetailTableViewController *detailVc = segue.destinationViewController;
+    detailVc.detailResult = (BMKPoiDetailResult *)sender;
+    detailVc.delegate = self;
+}
+
 
 
 /**
@@ -912,11 +1014,11 @@
     for (BMKPoiInfo *info in poiInfoList) {
 //        Mylog(@"%@--%@--%@--%f--%f", info.name, info.uid, info.address, info.pt.latitude, info.pt.longitude);
         
-        BMKPointAnnotation *pointAnno = [[BMKPointAnnotation alloc] init];
+        MRPointAnnotation *pointAnno = [[MRPointAnnotation alloc] init];
         pointAnno.title = info.name;
         pointAnno.subtitle = info.address;
         pointAnno.coordinate = info.pt;
-        
+        pointAnno.poiUid = info.uid;
         [self.mapView addAnnotation:pointAnno];
     }
 }
@@ -995,6 +1097,15 @@
     {
         NSLog(@"car检索发送失败");
     }
+}
+
+- (void)detailBtnClick
+{
+    BMKPoiDetailSearchOption *poiDetailSearchOption = [[BMKPoiDetailSearchOption alloc] init];
+    poiDetailSearchOption.poiUid = self.poiUid;
+    
+    [self.poiSearch poiDetailSearch:poiDetailSearchOption];
+
 }
 
 
@@ -1129,6 +1240,20 @@
     rect.size = BMKMapSizeMake(rbX - ltX, rbY - ltY);
     [_mapView setVisibleMapRect:rect];
     _mapView.zoomLevel = _mapView.zoomLevel - 0.3;
+}
+
+#pragma mark -
+#pragma mark MRParkDetailTableViewControllerDelegate
+- (void)parkDetailTableViewController:(MRParkDetailTableViewController *)detailVc btnDidClick:(UIButton *)btn
+{
+    if (btn.tag == 11) { // 前往
+        Mylog(@"前往");
+        [self gotoBtnClick];
+    }else if (btn.tag == 12){ // 立即预约
+        Mylog(@"立即预约");
+        [MBProgressHUD showError:@"敬请期待!!!" toView:self.view];
+    }
+
 }
 
 

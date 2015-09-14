@@ -7,6 +7,8 @@
 //
 
 #import "MRLeftMenuTableViewController.h"
+#import "MBProgressHUD+MR.h"
+
 
 @interface MRLeftMenuTableViewController ()
 
@@ -24,7 +26,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_login"]];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +33,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    [MBProgressHUD showError:@"敬请期待!!!" toView:self.view];
+
+}
 
 
 @end

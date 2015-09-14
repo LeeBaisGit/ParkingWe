@@ -30,6 +30,22 @@
 		8EC536691B67527300BD28D1 /* ParkingWeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC536681B67527300BD28D1 /* ParkingWeTests.m */; };
 		8EDB58D11B7AEECD009A7746 /* MRPaoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB58D01B7AEECC009A7746 /* MRPaoPaoView.m */; };
 		8EDB58D31B7AEFA7009A7746 /* MRPaoPaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDB58D21B7AEFA7009A7746 /* MRPaoPaoView.xib */; };
+		8EDCB0C81B857A680017D378 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDCB0BF1B857A680017D378 /* Login.storyboard */; };
+		8EDCB0C91B857A680017D378 /* MRBaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0C11B857A680017D378 /* MRBaseLoginViewController.m */; };
+		8EDCB0CA1B857A680017D378 /* MRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0C31B857A680017D378 /* MRLoginViewController.m */; };
+		8EDCB0CB1B857A680017D378 /* MROtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0C51B857A680017D378 /* MROtherLoginViewController.m */; };
+		8EDCB0CC1B857A680017D378 /* MRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0C71B857A680017D378 /* MRRegisterViewController.m */; };
+		8EDCB0D01B857E120017D378 /* MBProgressHUD+MR.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0CF1B857E120017D378 /* MBProgressHUD+MR.m */; };
+		8EDCB0D71B857F130017D378 /* MRUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0D31B857F130017D378 /* MRUserInfo.m */; };
+		8EDCB0D81B857F130017D378 /* MRXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0D51B857F130017D378 /* MRXMPPTool.m */; };
+		8EDCB0E71B857F7D0017D378 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0DC1B857F7D0017D378 /* UIButton+WF.m */; };
+		8EDCB0E81B857F7D0017D378 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0DE1B857F7D0017D378 /* UIImage+WF.m */; };
+		8EDCB0E91B857F7D0017D378 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0E01B857F7D0017D378 /* UIScreen+WF.m */; };
+		8EDCB0EA1B857F7E0017D378 /* UIStoryboard+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0E21B857F7D0017D378 /* UIStoryboard+WF.m */; };
+		8EDCB0EB1B857F7E0017D378 /* UITextField+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0E41B857F7D0017D378 /* UITextField+WF.m */; };
+		8EDCB0EC1B857F7E0017D378 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0E61B857F7D0017D378 /* UIView+WF.m */; };
+		8EDCB0F11B858BA70017D378 /* MRPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB0F01B858BA70017D378 /* MRPointAnnotation.m */; };
+		8EDCB1101B85C6B40017D378 /* MRParkDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB10F1B85C6B40017D378 /* MRParkDetailTableViewController.m */; };
 		B3E8A4828B8508E624E85095 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 727862277B0067F525BDDA00 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +100,40 @@
 		8EDB58CF1B7AEECC009A7746 /* MRPaoPaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRPaoPaoView.h; sourceTree = "<group>"; };
 		8EDB58D01B7AEECC009A7746 /* MRPaoPaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRPaoPaoView.m; sourceTree = "<group>"; };
 		8EDB58D21B7AEFA7009A7746 /* MRPaoPaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRPaoPaoView.xib; sourceTree = "<group>"; };
+		8EDCB0BF1B857A680017D378 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		8EDCB0C01B857A680017D378 /* MRBaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBaseLoginViewController.h; sourceTree = "<group>"; };
+		8EDCB0C11B857A680017D378 /* MRBaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBaseLoginViewController.m; sourceTree = "<group>"; };
+		8EDCB0C21B857A680017D378 /* MRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRLoginViewController.h; sourceTree = "<group>"; };
+		8EDCB0C31B857A680017D378 /* MRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRLoginViewController.m; sourceTree = "<group>"; };
+		8EDCB0C41B857A680017D378 /* MROtherLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MROtherLoginViewController.h; sourceTree = "<group>"; };
+		8EDCB0C51B857A680017D378 /* MROtherLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MROtherLoginViewController.m; sourceTree = "<group>"; };
+		8EDCB0C61B857A680017D378 /* MRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRRegisterViewController.h; sourceTree = "<group>"; };
+		8EDCB0C71B857A680017D378 /* MRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRRegisterViewController.m; sourceTree = "<group>"; };
+		8EDCB0CE1B857E120017D378 /* MBProgressHUD+MR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MR.h"; sourceTree = "<group>"; };
+		8EDCB0CF1B857E120017D378 /* MBProgressHUD+MR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MR.m"; sourceTree = "<group>"; };
+		8EDCB0D21B857F130017D378 /* MRUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRUserInfo.h; sourceTree = "<group>"; };
+		8EDCB0D31B857F130017D378 /* MRUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRUserInfo.m; sourceTree = "<group>"; };
+		8EDCB0D41B857F130017D378 /* MRXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRXMPPTool.h; sourceTree = "<group>"; };
+		8EDCB0D51B857F130017D378 /* MRXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRXMPPTool.m; sourceTree = "<group>"; };
+		8EDCB0D61B857F130017D378 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		8EDCB0DA1B857F7D0017D378 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
+		8EDCB0DB1B857F7D0017D378 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
+		8EDCB0DC1B857F7D0017D378 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
+		8EDCB0DD1B857F7D0017D378 /* UIImage+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WF.h"; sourceTree = "<group>"; };
+		8EDCB0DE1B857F7D0017D378 /* UIImage+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WF.m"; sourceTree = "<group>"; };
+		8EDCB0DF1B857F7D0017D378 /* UIScreen+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WF.h"; sourceTree = "<group>"; };
+		8EDCB0E01B857F7D0017D378 /* UIScreen+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WF.m"; sourceTree = "<group>"; };
+		8EDCB0E11B857F7D0017D378 /* UIStoryboard+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+WF.h"; sourceTree = "<group>"; };
+		8EDCB0E21B857F7D0017D378 /* UIStoryboard+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+WF.m"; sourceTree = "<group>"; };
+		8EDCB0E31B857F7D0017D378 /* UITextField+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WF.h"; sourceTree = "<group>"; };
+		8EDCB0E41B857F7D0017D378 /* UITextField+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WF.m"; sourceTree = "<group>"; };
+		8EDCB0E51B857F7D0017D378 /* UIView+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WF.h"; sourceTree = "<group>"; };
+		8EDCB0E61B857F7D0017D378 /* UIView+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WF.m"; sourceTree = "<group>"; };
+		8EDCB0EE1B8582B10017D378 /* XMPPFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
+		8EDCB0EF1B858BA70017D378 /* MRPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRPointAnnotation.h; sourceTree = "<group>"; };
+		8EDCB0F01B858BA70017D378 /* MRPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRPointAnnotation.m; sourceTree = "<group>"; };
+		8EDCB10E1B85C6B40017D378 /* MRParkDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRParkDetailTableViewController.h; sourceTree = "<group>"; };
+		8EDCB10F1B85C6B40017D378 /* MRParkDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRParkDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +180,7 @@
 		8E05E1431B69FC9700FCFB58 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8EDCB0BE1B857A680017D378 /* Login */,
 				8EBC4DB11B6F2D6000B80CC6 /* Lib */,
 				8E05E14C1B6A006100FCFB58 /* RightMenu */,
 				8E05E14B1B6A004600FCFB58 /* LeftMenu */,
@@ -143,7 +194,6 @@
 		8E05E1441B69FCA000FCFB58 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8EB8E67F1B84231F00195A86 /* Extension */,
 				8EB8E67E1B84230700195A86 /* Controller */,
 			);
 			name = Main;
@@ -212,18 +262,13 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		8EB8E67F1B84231F00195A86 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8EB8E6801B84234100195A86 /* UIImage+Rotate.h */,
-				8EB8E6811B84234100195A86 /* UIImage+Rotate.m */,
-			);
-			name = Extension;
-			sourceTree = "<group>";
-		};
 		8EBC4DB11B6F2D6000B80CC6 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				8EDCB0EE1B8582B10017D378 /* XMPPFramework.h */,
+				8EDCB0ED1B8580710017D378 /* Singleton */,
+				8EDCB0D91B857F7D0017D378 /* Category */,
+				8EDCB0D11B857E550017D378 /* Extension */,
 				8EB405481B7337A2006ED2E3 /* BaiduMapAPI */,
 			);
 			name = Lib;
@@ -289,11 +334,80 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8EDCB0BE1B857A680017D378 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8EDCB0CD1B857A730017D378 /* Controller */,
+				8EDCB0BF1B857A680017D378 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8EDCB0CD1B857A730017D378 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8EDCB0C01B857A680017D378 /* MRBaseLoginViewController.h */,
+				8EDCB0C11B857A680017D378 /* MRBaseLoginViewController.m */,
+				8EDCB0C21B857A680017D378 /* MRLoginViewController.h */,
+				8EDCB0C31B857A680017D378 /* MRLoginViewController.m */,
+				8EDCB0C41B857A680017D378 /* MROtherLoginViewController.h */,
+				8EDCB0C51B857A680017D378 /* MROtherLoginViewController.m */,
+				8EDCB0C61B857A680017D378 /* MRRegisterViewController.h */,
+				8EDCB0C71B857A680017D378 /* MRRegisterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8EDCB0D11B857E550017D378 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EB8E6801B84234100195A86 /* UIImage+Rotate.h */,
+				8EB8E6811B84234100195A86 /* UIImage+Rotate.m */,
+				8EDCB0CE1B857E120017D378 /* MBProgressHUD+MR.h */,
+				8EDCB0CF1B857E120017D378 /* MBProgressHUD+MR.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		8EDCB0D91B857F7D0017D378 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8EDCB0DA1B857F7D0017D378 /* CategoryWF.h */,
+				8EDCB0DB1B857F7D0017D378 /* UIButton+WF.h */,
+				8EDCB0DC1B857F7D0017D378 /* UIButton+WF.m */,
+				8EDCB0DD1B857F7D0017D378 /* UIImage+WF.h */,
+				8EDCB0DE1B857F7D0017D378 /* UIImage+WF.m */,
+				8EDCB0DF1B857F7D0017D378 /* UIScreen+WF.h */,
+				8EDCB0E01B857F7D0017D378 /* UIScreen+WF.m */,
+				8EDCB0E11B857F7D0017D378 /* UIStoryboard+WF.h */,
+				8EDCB0E21B857F7D0017D378 /* UIStoryboard+WF.m */,
+				8EDCB0E31B857F7D0017D378 /* UITextField+WF.h */,
+				8EDCB0E41B857F7D0017D378 /* UITextField+WF.m */,
+				8EDCB0E51B857F7D0017D378 /* UIView+WF.h */,
+				8EDCB0E61B857F7D0017D378 /* UIView+WF.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8EDCB0ED1B8580710017D378 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				8EDCB0D21B857F130017D378 /* MRUserInfo.h */,
+				8EDCB0D31B857F130017D378 /* MRUserInfo.m */,
+				8EDCB0D41B857F130017D378 /* MRXMPPTool.h */,
+				8EDCB0D51B857F130017D378 /* MRXMPPTool.m */,
+				8EDCB0D61B857F130017D378 /* Singleton.h */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
 		8EFDF4581B708DF80034B1A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				8E05E1481B69FDA900FCFB58 /* MRHomeViewController.h */,
 				8E05E1491B69FDA900FCFB58 /* MRHomeViewController.mm */,
+				8EDCB10E1B85C6B40017D378 /* MRParkDetailTableViewController.h */,
+				8EDCB10F1B85C6B40017D378 /* MRParkDetailTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -313,6 +427,8 @@
 			children = (
 				8E94C0B21B81A61F0057A2EF /* MRRouteAnnotation.h */,
 				8E94C0B31B81A61F0057A2EF /* MRRouteAnnotation.m */,
+				8EDCB0EF1B858BA70017D378 /* MRPointAnnotation.h */,
+				8EDCB0F01B858BA70017D378 /* MRPointAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -411,6 +527,7 @@
 			files = (
 				8EBC4DC81B6F60F400B80CC6 /* LeftMenu.plist in Resources */,
 				8EB405441B7332AF006ED2E3 /* mapapi.bundle in Resources */,
+				8EDCB0C81B857A680017D378 /* Login.storyboard in Resources */,
 				8EC536581B67527200BD28D1 /* Main.storyboard in Resources */,
 				8EC5365D1B67527300BD28D1 /* LaunchScreen.xib in Resources */,
 				8EC5365A1B67527200BD28D1 /* Images.xcassets in Resources */,
@@ -465,14 +582,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDCB0E81B857F7D0017D378 /* UIImage+WF.m in Sources */,
 				8E7414911B6F265A009D90BC /* MRRightMenuTableViewController.m in Sources */,
+				8EDCB0D71B857F130017D378 /* MRUserInfo.m in Sources */,
 				8E05E14A1B69FDA900FCFB58 /* MRHomeViewController.mm in Sources */,
+				8EDCB0CA1B857A680017D378 /* MRLoginViewController.m in Sources */,
 				8EC536551B67527200BD28D1 /* ViewController.mm in Sources */,
+				8EDCB0CB1B857A680017D378 /* MROtherLoginViewController.m in Sources */,
+				8EDCB0EB1B857F7E0017D378 /* UITextField+WF.m in Sources */,
+				8EDCB0EA1B857F7E0017D378 /* UIStoryboard+WF.m in Sources */,
+				8EDCB1101B85C6B40017D378 /* MRParkDetailTableViewController.m in Sources */,
+				8EDCB0CC1B857A680017D378 /* MRRegisterViewController.m in Sources */,
 				8EC536521B67527200BD28D1 /* AppDelegate.m in Sources */,
+				8EDCB0F11B858BA70017D378 /* MRPointAnnotation.m in Sources */,
+				8EDCB0E91B857F7D0017D378 /* UIScreen+WF.m in Sources */,
 				8E05E14F1B6A00AC00FCFB58 /* MRLeftMenuTableViewController.m in Sources */,
+				8EDCB0EC1B857F7E0017D378 /* UIView+WF.m in Sources */,
+				8EDCB0D81B857F130017D378 /* MRXMPPTool.m in Sources */,
 				8EC5364F1B67527200BD28D1 /* main.m in Sources */,
+				8EDCB0E71B857F7D0017D378 /* UIButton+WF.m in Sources */,
+				8EDCB0C91B857A680017D378 /* MRBaseLoginViewController.m in Sources */,
 				8EDB58D11B7AEECD009A7746 /* MRPaoPaoView.m in Sources */,
 				8E94C0B41B81A61F0057A2EF /* MRRouteAnnotation.m in Sources */,
+				8EDCB0D01B857E120017D378 /* MBProgressHUD+MR.m in Sources */,
 				8EB8E6821B84234100195A86 /* UIImage+Rotate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

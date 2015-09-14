@@ -23,5 +23,6 @@ typedef enum {
 
 @property(nonatomic,assign)int degree;
 
+@property(nonatomic,copy)NSString *poiUid;
 
 @end

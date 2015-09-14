@@ -42,7 +42,10 @@
 #define Mylog(...)
 #endif
 
-
+#import "CategoryWF.h"
+#import "MRUserInfo.h"
+#import "MBProgressHUD+MR.h"
+#import "MRXMPPTool.h"
 
 
 
