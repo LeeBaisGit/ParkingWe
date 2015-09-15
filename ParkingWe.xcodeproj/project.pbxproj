@@ -70,6 +70,7 @@
 		8E05E14E1B6A00AC00FCFB58 /* MRLeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRLeftMenuTableViewController.m; sourceTree = "<group>"; };
 		8E74148F1B6F265A009D90BC /* MRRightMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRRightMenuTableViewController.h; sourceTree = "<group>"; };
 		8E7414901B6F265A009D90BC /* MRRightMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRRightMenuTableViewController.m; sourceTree = "<group>"; };
+		8E887F161BA7DB4600DD76B8 /* CocoaPod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaPod.h; sourceTree = "<group>"; };
 		8E94C0B21B81A61F0057A2EF /* MRRouteAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRRouteAnnotation.h; sourceTree = "<group>"; };
 		8E94C0B31B81A61F0057A2EF /* MRRouteAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRRouteAnnotation.m; sourceTree = "<group>"; };
 		8EB405431B7332AF006ED2E3 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 				8EC5364E1B67527200BD28D1 /* main.m */,
 				8EC536501B67527200BD28D1 /* AppDelegate.h */,
 				8EC536511B67527200BD28D1 /* AppDelegate.m */,
+				8E887F161BA7DB4600DD76B8 /* CocoaPod.h */,
 			);
 			name = Other;
 			sourceTree = "<group>";
