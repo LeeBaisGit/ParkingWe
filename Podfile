@@ -1,0 +1,6 @@
+platform:ios, '8.2'
+pod 'Masonry', '~> 0.6.2'
+pod 'SDWebImage', '~> 3.7.3'
+pod 'RESideMenu', '~> 4.0.7'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'XMPPFramework', '~> 3.6.5'
